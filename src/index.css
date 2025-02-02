@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables */
+:root {
+  --primary-bg: #f8faff;
+  --secondary-bg: #eef1ff;
+  --accent-purple: #6366f1;
+  --accent-blue: #60a5fa;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply min-h-screen text-[#1e293b];
+    background: linear-gradient(to bottom right, #f8faff, #eef1ff);
+  }
+
+  /* Cursor Styles */
+  a, button, input, textarea, select, [role="button"] {
+    cursor: none !important;
+  }
+
+  /* Text Rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Navigation */
+  .nav-container {
+    @apply fixed top-0 left-0 right-0 z-50 p-4;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-[#64748b] 
+           hover:text-[#1e293b]
+           transition-colors duration-300;
+  }
+
+  .nav-link-active {
+    @apply text-[#1e293b];
+  }
+
+  .nav-button {
+    @apply text-sm font-medium px-5 py-2.5 rounded-full
+           transition-all duration-300
+           hover:shadow-md active:scale-[0.98];
+  }
+
+  .nav-button-primary {
+    @apply bg-[#6366f1] text-white hover:bg-[#4f46e5];
+  }
+
+  .nav-button-secondary {
+    @apply text-[#64748b] hover:text-[#1e293b];
+  }
+
+  .nav-panel {
+    @apply mx-auto relative max-w-3xl
+           bg-white/60 backdrop-blur-xl
+           rounded-full 
+           border border-white/30
+           shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]
+           hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.10)]
+           hover:bg-white/70
+           px-6 py-3
+           flex items-center justify-between
+           transition-all duration-500;
+  }
+
+  .nav-menu-centered {
+    @apply hidden md:flex items-center gap-8 px-6
+           absolute left-1/2 top-1/2
+           -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .nav-action-button {
+    @apply px-4 py-2 rounded-full
+           bg-[#6366f1] text-white
+           flex items-center gap-2
+           text-sm font-medium
+           hover:bg-[#4f46e5]
+           hover:shadow-md
+           transition-all duration-300;
+  }
+
+  .mobile-menu {
+    @apply absolute top-full left-4 right-4 mt-4
+           bg-white/60 backdrop-blur-xl
+           rounded-2xl 
+           border border-white/30
+           shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]
+           overflow-hidden;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply relative py-24 px-4 min-h-[90vh] 
+           flex items-center
+           pt-52
+           overflow-hidden;
+    background: linear-gradient(to bottom, #f8faff, white, white);
+  }
+
+  /* Feature Section */
+  .feature-section {
+    @apply relative py-24 bg-gradient-to-b from-white via-[#f8faff] to-[#eef1ff];
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    margin-bottom: -5vw;
+  }
+
+  .feature-card {
+    @apply bg-white rounded-2xl p-6
+           border border-gray-100
+           hover:shadow-lg transition-all duration-300
+           relative overflow-hidden;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Service Section */
+  .service-section {
+    @apply relative py-32 bg-gradient-to-b from-[#eef1ff] via-[#f0f4ff] to-[#f8faff];
+    padding-top: calc(5vw + 6rem);
+  }
+
+  /* Service Card - Updated to match feature cards */
+  .service-card {
+    @apply p-8 rounded-2xl 
+           bg-white/80 backdrop-blur
+           border border-gray-100
+           hover:shadow-lg 
+           transition-all duration-300;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Update service card text colors */
+  .service-card .icon-container {
+    @apply text-[#6366f1] mb-6 
+           transition-all duration-300;
+  }
+
+  .service-card h3 {
+    @apply text-xl font-semibold mb-3 
+           text-[#1e293b]
+           transition-colors duration-300;
+  }
+
+  .service-card p {
+    @apply text-[#64748b]
+           transition-colors duration-300;
+  }
+
+  /* Cards */
+  .glass-card {
+    @apply backdrop-blur bg-white/70 rounded-2xl p-6
+           border border-white/20 shadow-md
+           transition-all duration-300
+           hover:shadow-lg;
+  }
+
+  .task-card {
+    @apply bg-white rounded-xl p-4
+           border border-gray-100 shadow-sm
+           transition-all duration-300
+           hover:shadow-md;
+  }
+
+  /* Buttons */
+  .primary-button {
+    @apply px-6 py-3 rounded-full
+           bg-[#6366f1] text-white
+           flex items-center gap-2
+           shadow-md
+           transition-all duration-300
+           hover:bg-[#4f46e5] hover:shadow-lg;
+  }
+
+  .secondary-button {
+    @apply px-6 py-3 rounded-full
+           bg-white text-[#6366f1]
+           flex items-center gap-2
+           border border-gray-200
+           shadow-sm
+           transition-all duration-300
+           hover:border-[#6366f1] hover:shadow-md;
+  }
+
+  /* Feature Tags */
+  .feature-tag {
+    @apply px-4 py-1.5 rounded-full text-sm font-medium;
+  }
+
+  .feature-tag-blue {
+    @apply bg-blue-100/50 text-blue-600;
+  }
+
+  .feature-tag-purple {
+    @apply bg-purple-100/50 text-purple-600;
+  }
+
+  .feature-tag-pink {
+    @apply bg-pink-100/50 text-pink-600;
+  }
+
+  .feature-tag-orange {
+    @apply bg-orange-100/50 text-orange-600;
+  }
+
+  /* Logo */
+  .logo-container {
+    @apply flex items-center gap-2 transition-transform duration-300;
+  }
+
+  .logo-text {
+    @apply font-semibold text-[#1e293b] 
+           transition-colors duration-300;
+  }
+
+  /* Update navigation menu styles */
+  .nav-menu {
+    @apply hidden md:flex items-center gap-8
+           px-6;
+  }
+
+  /* Update the nav hover effect styles */
+  .nav-link-hover {
+    @apply relative text-[#64748b] 
+           transition-colors duration-300
+           hover:text-[#1e293b];
+  }
+
+  .nav-link-hover::before {
+    content: '';
+    @apply absolute -inset-x-4 -inset-y-2
+           bg-blue-200/30 rounded-full
+           opacity-0 scale-90
+           transition-all duration-300
+           backdrop-blur-sm
+           -z-10;
+  }
+
+  .nav-link-hover:hover::before {
+    @apply opacity-100 scale-100;
+    animation: pulseBackground 2s infinite;
+    background: radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgb(96 165 250 / 0.3),
+      rgb(96 165 250 / 0.1) 35%,
+      transparent 70%
+    );
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor-inner {
+  @apply fixed pointer-events-none z-50;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6366f1;
+  transform-origin: center;
+  transition: all 0.2s ease-out;
+}
+
+.custom-cursor-outer {
+  @apply fixed pointer-events-none z-40;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #6366f1;
+  transform-origin: center;
+  transition: all 0.3s ease-out;
+}
+
+.custom-cursor-outer.hovering {
+  width: 24px;
+  height: 24px;
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Animations */
+@keyframes pulseBackground {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(0.95); }
+}
+
+/* Particles */
+.tsparticles-canvas-el {
+  pointer-events: none;
+}
+
+/* Page Transitions */
+.page-transition-enter {
+  @apply opacity-0 translate-y-5;
+}
+
+.page-transition-enter-active {
+  @apply opacity-100 translate-y-0 transition-all duration-300;
+}
+
+.page-transition-exit {
+  @apply opacity-100 translate-y-0;
+}
+
+.page-transition-exit-active {
+  @apply opacity-0 -translate-y-5 transition-all duration-300;
+}

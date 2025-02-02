@@ -1,0 +1,180 @@
+/* Remove any existing section breaks */
+.services-section {
+    background: transparent; /* Remove separate background */
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px; /* Adjust this value to remove any gaps */
+}
+
+/* Update the main background to be continuous */
+body {
+    background: linear-gradient(180deg, #1a1f2e 0%, #242b42 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Style the service cards to blend with the continuous design */
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Adjust the services title to flow with the design */
+.services-section h2 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Add a radial gradient for a lighter effect */
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 25%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    pointer-events: none;
+}
+
+/* Style for service cards */
+.services-section h2,
+.services-section .service-card {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-section {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(
+        135deg,
+        rgba(37, 45, 70, 0.97) 0%,
+        rgba(63, 82, 146, 0.97) 100%
+    );
+    overflow: hidden;
+}
+
+/* Add a modern light effect overlay */
+.portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(99, 157, 255, 0.15) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(91, 155, 255, 0.1) 0%,
+            transparent 50%
+        );
+    pointer-events: none;
+}
+
+/* Add subtle animated gradient */
+.portfolio-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(
+        45deg,
+        rgba(56, 128, 255, 0.1) 0%,
+        rgba(0, 136, 255, 0.05) 25%,
+        rgba(91, 155, 255, 0.1) 50%,
+        rgba(0, 136, 255, 0.05) 75%,
+        rgba(56, 128, 255, 0.1) 100%
+    );
+    animation: gradientMove 15s linear infinite;
+    z-index: 1;
+}
+
+/* Portfolio items container */
+.portfolio-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Portfolio item styling */
+.portfolio-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add some shine effects to portfolio items */
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    animation: shine 8s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 200%;
+    }
+    100% {
+        left: 200%;
+    }
+} 
