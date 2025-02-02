@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const ContactSection = () => {
   return (
@@ -13,9 +14,28 @@ export const ContactSection = () => {
         </div>
 
         {/* Contact Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="relative grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+          {/* Circular Arrow */}
+          <motion.div 
+            className="hidden md:block absolute left-[calc(50%-2.5rem)] top-[calc(50%-2.5rem)] z-20"
+            initial={{ rotate: -45, scale: 0 }}
+            animate={{ rotate: 0, scale: 1 }}
+            transition={{ 
+              duration: 0.6, 
+              ease: "easeOut",
+              scale: { delay: 0.2 }
+            }}
+            style={{
+              transform: 'translate(25%, -50%)'  // Move circle right and up
+            }}
+          >
+            <div className="w-20 h-20 rounded-full bg-black flex items-center justify-center shadow-xl">
+              <ArrowRight className="w-10 h-10 text-white" />
+            </div>
+          </motion.div>
+
           {/* Contact Info */}
-          <div className="bg-[#adb5bf] rounded-3xl p-12 flex flex-col justify-between">
+          <div className="bg-[#adb5bf] rounded-[2rem] p-12 flex flex-col justify-between relative">
             <div className="space-y-6">
               <p className="text-xl text-[#1e293b]">hello@one.com</p>
               <p className="text-xl text-[#1e293b]">+1 7037568571</p>
@@ -34,7 +54,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-[#dadee1] rounded-3xl p-12">
+          <div className="bg-[#dadee1] rounded-[2rem] p-12 relative">
             <form className="space-y-6">
               <div>
                 <input
