@@ -142,7 +142,7 @@ export const Contact = () => {
           >
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
               <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-primary dark:text-secondary flex-shrink-0" />
+                <MapPin className="w-6 h-6 text-[#E4A853] flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Our Location
@@ -158,7 +158,7 @@ export const Contact = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
               <div className="flex items-start space-x-4">
-                <Clock className="w-6 h-6 text-primary dark:text-secondary flex-shrink-0" />
+                <Clock className="w-6 h-6 text-[#6366f1] flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Business Hours
@@ -173,14 +173,14 @@ export const Contact = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
               <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-primary dark:text-secondary flex-shrink-0" />
+                <Mail className="w-6 h-6 text-[#E4A853] flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Email Us
                   </h3>
                   <a
                     href="mailto:info@luminious.net"
-                    className="text-primary dark:text-secondary hover:opacity-80 transition-opacity"
+                    className="text-gray-600 hover:text-[#6366f1] transition-colors"
                   >
                     info@luminious.net
                   </a>
@@ -190,14 +190,14 @@ export const Contact = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
               <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 text-primary dark:text-secondary flex-shrink-0" />
+                <Phone className="w-6 h-6 text-[#6366f1] flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Call Us
                   </h3>
                   <a
                     href="tel:+917907680536"
-                    className="text-primary dark:text-secondary hover:opacity-80 transition-opacity"
+                    className="text-gray-600 hover:text-[#6366f1] transition-colors"
                   >
                     +91 79076 80536
                   </a>

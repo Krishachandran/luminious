@@ -1,88 +1,85 @@
 import React from 'react';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import Logo from './Logo';
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0f172a] text-gray-300 py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary dark:text-white">Luminious</h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              Transforming ideas into exceptional digital experiences
-            </p>
-            <a
-              href="mailto:info@luminious.net"
-              className="text-primary dark:text-secondary hover:opacity-80 transition-opacity inline-flex items-center gap-2"
+    <footer className="relative py-8 overflow-hidden">
+      {/* Dark gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2e3136] to-[#17191c]" />
+      
+      {/* Subtle overlay for depth */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.15)_0%,_transparent_50%)]" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Logo and Company Name */}
+          <Link to="/" className="flex items-center gap-3">
+            <Logo />
+            <span className="text-2xl font-semibold text-white">Luminious</span>
+          </Link>
+
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+            <Link to="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
+              Privacy policy
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/success" className="text-gray-300 hover:text-white transition-colors">
+              Success
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex items-center gap-5">
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-black/20 p-3 rounded-full hover:bg-black/30 transition-colors"
             >
-              <Mail size={18} />
-              info@luminious.net
+              <Facebook size={22} className="text-white" />
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-black/20 p-3 rounded-full hover:bg-black/30 transition-colors"
+            >
+              <Instagram size={22} className="text-white" />
+            </a>
+            <a 
+              href="https://twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-black/20 p-3 rounded-full hover:bg-black/30 transition-colors"
+            >
+              <Twitter size={22} className="text-white" />
+            </a>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-black/20 p-3 rounded-full hover:bg-black/30 transition-colors"
+            >
+              <Linkedin size={22} className="text-white" />
             </a>
           </div>
+        </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Connect</h4>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
-              >
-                <Twitter size={24} />
-              </a>
-            </div>
-          </div>
-
-          {/* Business Hours */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Business Hours</h4>
-            <div className="text-gray-600 dark:text-gray-300">
-              <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-              <p>Saturday - Sunday: Closed</p>
-            </div>
-          </div>
-
-          {/* Legal section */}
-          <div>
-            <h2 className="text-white text-xl font-semibold mb-4">Legal</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/privacy-policy" 
-                  className="text-gray-400 hover:text-gray-300 transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/terms-conditions" 
-                  className="text-gray-400 hover:text-gray-300 transition-colors"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-            </ul>
+        {/* Divider Line */}
+        <div className="mt-5 pt-6 border-t-[3px] border-gray-700/50">
+          <div className="text-center text-gray-400 text-sm">
+            © 2025 Luminious. All rights reserved.
           </div>
         </div>
       </div>

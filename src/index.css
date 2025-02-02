@@ -24,9 +24,10 @@
   body {
     @apply min-h-screen text-[#1e293b];
     background: linear-gradient(to bottom right, #f8faff, #eef1ff);
+    cursor: none !important; /* Hide system cursor */
   }
 
-  /* Cursor Styles */
+  /* Hide system cursor on interactive elements */
   a, button, input, textarea, select, [role="button"] {
     cursor: none !important;
   }
@@ -109,9 +110,9 @@
 
   /* Hero Section */
   .hero-section {
-    @apply relative py-24 px-4 min-h-[90vh] 
+    @apply relative px-4 min-h-[90vh] 
            flex items-center
-           pt-52
+           pt-16  /* Changed from pt-52 to pt-16 to match header spacing */
            overflow-hidden;
     background: linear-gradient(to bottom, #f8faff, white, white);
   }
@@ -267,7 +268,7 @@
 
 /* Custom Cursor */
 .custom-cursor-inner {
-  @apply fixed pointer-events-none z-50;
+  @apply fixed pointer-events-none z-[100];
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -277,7 +278,7 @@
 }
 
 .custom-cursor-outer {
-  @apply fixed pointer-events-none z-40;
+  @apply fixed pointer-events-none z-[90];
   width: 16px;
   height: 16px;
   border-radius: 50%;

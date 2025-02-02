@@ -10,9 +10,11 @@ export const Navigation = () => {
   const navRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Success', path: '/success' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -28,7 +30,7 @@ export const Navigation = () => {
   return (
     <nav className="nav-container" ref={navRef}>
       <div className="nav-panel max-w-3xl">
-        {/* Logo */}
+        {/* Logo - Already links to home page */}
         <Link to="/" className="logo-container">
           <Logo />
           <span className="font-semibold text-[#1e293b]">Luminious</span>
