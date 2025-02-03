@@ -315,45 +315,57 @@ export const Home = () => {
                   </h2>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-6">
                   {/* Benefit 1 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 bg-[#1e293b] rounded-xl flex items-center justify-center">
-                      <Leaf className="w-6 h-6 text-white" />
+                  <div className="service-card group hover:bg-[#1e293b] transition-colors duration-1000">
+                    <div className="icon-container group-hover:bg-transparent">
+                      <Leaf className="w-8 h-8 group-hover:text-white transition-colors duration-1000" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b]">
+                    <h3 className="group-hover:text-white transition-colors duration-1000">
                       Design is unique because we always explore
                     </h3>
+                    <p className="group-hover:text-white/80 transition-colors duration-1000">
+                      We create unique designs through continuous exploration and innovation
+                    </p>
                   </div>
 
                   {/* Benefit 2 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 bg-[#1e293b] rounded-xl flex items-center justify-center">
-                      <Headphones className="w-6 h-6 text-white" />
+                  <div className="service-card group hover:bg-[#1e293b] transition-colors duration-1000">
+                    <div className="icon-container group-hover:bg-transparent">
+                      <Headphones className="w-8 h-8 group-hover:text-white transition-colors duration-1000" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b]">
+                    <h3 className="group-hover:text-white transition-colors duration-1000">
                       Provide good and flexible communication
                     </h3>
+                    <p className="group-hover:text-white/80 transition-colors duration-1000">
+                      Clear and adaptable communication throughout the project
+                    </p>
                   </div>
 
                   {/* Benefit 3 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 bg-[#1e293b] rounded-xl flex items-center justify-center">
-                      <Calendar className="w-6 h-6 text-white" />
+                  <div className="service-card group hover:bg-[#1e293b] transition-colors duration-1000">
+                    <div className="icon-container group-hover:bg-transparent">
+                      <Calendar className="w-8 h-8 group-hover:text-white transition-colors duration-1000" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b]">
+                    <h3 className="group-hover:text-white transition-colors duration-1000">
                       The project completion time is as agreed
                     </h3>
+                    <p className="group-hover:text-white/80 transition-colors duration-1000">
+                      We deliver projects on schedule as per our commitments
+                    </p>
                   </div>
 
                   {/* Benefit 4 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 bg-[#1e293b] rounded-xl flex items-center justify-center">
-                      <CreditCard className="w-6 h-6 text-white" />
+                  <div className="service-card group hover:bg-[#1e293b] transition-colors duration-1000">
+                    <div className="icon-container group-hover:bg-transparent">
+                      <CreditCard className="w-8 h-8 group-hover:text-white transition-colors duration-1000" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b]">
+                    <h3 className="group-hover:text-white transition-colors duration-1000">
                       Trusted payment systems & methods
                     </h3>
+                    <p className="group-hover:text-white/80 transition-colors duration-1000">
+                      Secure and reliable payment options for your convenience
+                    </p>
                   </div>
                 </div>
               </div>

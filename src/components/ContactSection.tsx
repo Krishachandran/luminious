@@ -35,21 +35,66 @@ export const ContactSection = () => {
           </motion.div>
 
           {/* Contact Info */}
-          <div className="bg-[#adb5bf] rounded-[2rem] p-12 flex flex-col justify-between relative">
-            <div className="space-y-6">
-              <p className="text-xl text-[#1e293b]">hello@one.com</p>
-              <p className="text-xl text-[#1e293b]">+1 7037568571</p>
+          <div className="bg-[#adb5bf] rounded-[2rem] p-12 flex flex-col justify-between relative overflow-hidden">
+            <div className="space-y-6 relative z-10">
+              <p className="text-xl text-[#1e293b]">info@luminious.net</p>
+              <p className="text-xl text-[#1e293b]">+91 9845085807</p>
               <div className="pt-8">
-                <p className="text-xl text-[#1e293b]">775 Westminster Avenue</p>
-                <p className="text-xl text-[#1e293b]">Brooklyn, NY 11230</p>
+                <p className="text-xl text-[#1e293b]">Jyothi Nagar, 2nd Mile</p>
+                <p className="text-xl text-[#1e293b]">Kottayam, Kerala 686522</p>
               </div>
             </div>
             
             {/* Decorative Elements */}
-            <div className="relative">
-              <div className="absolute bottom-0 right-0 w-24 h-24 opacity-20">
-                {/* Add your decorative SVG or pattern here */}
-              </div>
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Top right circles */}
+              <svg className="absolute top-0 right-0 w-48 h-48 text-white/20" viewBox="0 0 100 100">
+                <circle cx="80" cy="20" r="6" fill="currentColor" />
+                <circle cx="60" cy="40" r="6" fill="currentColor" />
+                <circle cx="90" cy="40" r="6" fill="currentColor" />
+                <circle cx="70" cy="30" r="4" fill="currentColor" />
+                <circle cx="85" cy="30" r="3" fill="currentColor" />
+                <circle cx="75" cy="45" r="4" fill="currentColor" />
+              </svg>
+
+              {/* Bottom left circles */}
+              <svg className="absolute bottom-0 left-0 w-64 h-64 text-white/20" viewBox="0 0 100 100">
+                <circle cx="20" cy="60" r="4" fill="currentColor" />
+                <circle cx="40" cy="80" r="4" fill="currentColor" />
+                <circle cx="20" cy="80" r="4" fill="currentColor" />
+                <circle cx="40" cy="60" r="4" fill="currentColor" />
+                <circle cx="60" cy="80" r="4" fill="currentColor" />
+                <circle cx="30" cy="70" r="4" fill="currentColor" />
+                <circle cx="50" cy="70" r="4" fill="currentColor" />
+                <circle cx="10" cy="70" r="4" fill="currentColor" />
+                <circle cx="25" cy="65" r="3" fill="currentColor" />
+                <circle cx="45" cy="75" r="3" fill="currentColor" />
+                <circle cx="15" cy="85" r="3" fill="currentColor" />
+              </svg>
+
+              {/* Center circles */}
+              <svg className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-white/10" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="3" fill="currentColor" />
+                <circle cx="65" cy="50" r="3" fill="currentColor" />
+                <circle cx="35" cy="50" r="3" fill="currentColor" />
+                <circle cx="50" cy="35" r="3" fill="currentColor" />
+                <circle cx="50" cy="65" r="3" fill="currentColor" />
+              </svg>
+
+              {/* Top left small circles */}
+              <svg className="absolute top-0 left-0 w-32 h-32 text-white/15" viewBox="0 0 100 100">
+                <circle cx="20" cy="20" r="3" fill="currentColor" />
+                <circle cx="35" cy="20" r="3" fill="currentColor" />
+                <circle cx="20" cy="35" r="3" fill="currentColor" />
+              </svg>
+
+              {/* Bottom right small circles */}
+              <svg className="absolute bottom-0 right-0 w-40 h-40 text-white/15" viewBox="0 0 100 100">
+                <circle cx="70" cy="70" r="4" fill="currentColor" />
+                <circle cx="85" cy="70" r="3" fill="currentColor" />
+                <circle cx="70" cy="85" r="3" fill="currentColor" />
+                <circle cx="80" cy="80" r="2" fill="currentColor" />
+              </svg>
             </div>
           </div>
 
