@@ -23,7 +23,7 @@ export const Home = () => {
     <>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="hero-section">
+        <section className="hero-section bg-gradient-to-b from-white via-white to-[#f5f3ff] -mt-[80px] pt-[80px]">
           <ParticlesBackground />
           <div className="container mx-auto px-4 relative z-10 max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -84,17 +84,10 @@ export const Home = () => {
               </motion.div>
             </div>
           </div>
-          
-          {/* Add subtle wave divider */}
-          <div className="wave-divider">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-            </svg>
-          </div>
         </section>
 
         {/* Features Section */}
-        <section className="feature-section">
+        <section className="py-24 bg-gradient-to-b from-[#f5f3ff] to-[#eff6ff]">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-16 text-[#1e293b]">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -171,7 +164,7 @@ export const Home = () => {
         </section>
 
         {/* Services Section */}
-        <section className="service-section pb-[250px]">
+        <section className="py-24 bg-gradient-to-b from-[#eff6ff] to-[#f5f3ff]">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-16 text-[#1e293b]">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -301,7 +294,7 @@ export const Home = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-[#f8f9fc]">
+        <section className="py-24 bg-gradient-to-b from-[#f5f3ff] to-[#eff6ff]">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left side - Image */}
@@ -363,6 +356,151 @@ export const Home = () => {
                     </h3>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Section */}
+        <section className="py-24 bg-gradient-to-b from-[#eff6ff] to-[#f5f3ff]">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <p className="text-[#6366f1] font-medium mb-4">OUR HAPPY CLIENTS</p>
+              <h2 className="text-4xl font-bold text-[#1e293b]">
+                Some of our partners and clients
+              </h2>
+            </div>
+
+            {/* Logo Grid */}
+            <div className="max-w-6xl mx-auto">
+              {/* First Row */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.7, y: 0 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.1,
+                    y: -5,
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
+                  }}
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="/logos/jslogo.svg" 
+                    alt="JS Equipments" 
+                    className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" 
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.7, y: 0 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.1,
+                    y: -5,
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
+                  }}
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="/logos/chargeflow.svg" 
+                    alt="Chargeflow" 
+                    className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" 
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.7, y: 0 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.1,
+                    y: -5,
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
+                  }}
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="/logos/xrecruiter.svg" 
+                    alt="XRecruiter" 
+                    className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" 
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.7, y: 0 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.1,
+                    y: -5,
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
+                  }}
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="/logos/alquraishi.svg" 
+                    alt="Al Quraishi" 
+                    className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" 
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.7, y: 0 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.1,
+                    y: -5,
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
+                  }}
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="/logos/billy.svg" 
+                    alt="Billy" 
+                    className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" 
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.7, y: 0 }}
+                  whileHover={{ 
+                    opacity: 1,
+                    scale: 1.1,
+                    y: -5,
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 300
+                  }}
+                  className="flex justify-center"
+                >
+                  <img 
+                    src="/logos/swaggy.svg" 
+                    alt="Swaggy" 
+                    className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" 
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
