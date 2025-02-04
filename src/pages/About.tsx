@@ -58,15 +58,15 @@ export default function About() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 pt-[95px] pb-12">
-          <div className="container mx-auto px-8 max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-24 items-center">
-              <div className="space-y-8 max-w-2xl">
+        <div className="relative z-10 pt-[140px] md:pt-[95px] pb-0">
+          <div className="container mx-auto px-4 sm:px-8 max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-center">
+              <div className="space-y-6 md:space-y-8 max-w-2xl">
                 <motion.h1 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-[64px] leading-[1.2] font-medium text-[#1e293b] tracking-tight"
+                  className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] leading-[1.2] font-medium text-[#1e293b] tracking-tight"
                 >
                   BRING ALL YOUR<br />
                   IDEAS TO LIFE WITH OUR<br />
@@ -76,7 +76,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-[#64748b] text-lg leading-relaxed max-w-xl"
+                  className="text-base sm:text-lg text-[#64748b] leading-relaxed max-w-xl"
                 >
                   Our creative team gets to work, crafting a custom design that's not only beautiful but functional. We develop your landing page using the latest technologies and best practices.
                 </motion.p>
@@ -194,12 +194,12 @@ export default function About() {
       </section>
 
       {/* About Section */}
-      <section className="py-24 bg-gradient-to-b from-[#f5f3ff] to-[#eff6ff]">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+      <section className="-mt-48 md:mt-0 py-0 md:py-16 bg-gradient-to-b from-[#f5f3ff] to-[#eff6ff]">
+        <div className="container mx-auto px-4 sm:px-8 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-24 items-start">
             {/* Left Side */}
-            <div className="space-y-6 lg:pl-4">
-              <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4 lg:pl-4">
+              <div className="space-y-3 md:space-y-4">
                 <h3 className="text-2xl font-medium text-[#1e293b]">About Us</h3>
                 <p className="text-[#64748b] leading-relaxed text-lg max-w-xl">
                   An agency is an organization or entity that provides a specific service on behalf of another party. In many cases, agencies act as intermediaries.
@@ -215,7 +215,7 @@ export default function About() {
               </div>
 
               {/* Stats Card */}
-              <div className="bg-white rounded-[2rem] p-8 mt-12 relative overflow-hidden lg:mr-6">
+              <div className="bg-white rounded-[2rem] p-6 md:p-8 mt-8 md:mt-12 relative overflow-hidden lg:mr-6">
                 <div className="absolute top-4 right-4 flex gap-2">
                   <span className="px-4 py-1 rounded-full bg-white border border-[#e2e8f0] text-sm text-[#64748b]">Our Service</span>
                   <span className="px-4 py-1 rounded-full bg-white border border-[#e2e8f0] text-sm text-[#64748b]">2024</span>
@@ -235,7 +235,7 @@ export default function About() {
             </div>
 
             {/* Right Side */}
-            <div className="space-y-6 lg:pr-4">
+            <div className="space-y-3 md:space-y-4 lg:pr-4">
               <h2 className="text-5xl font-medium text-[#1e293b] flex items-center gap-2">
                 Transforming ideas into visually stunning realities
                 <img src="/sphere.svg" alt="" className="w-8 h-8" />
@@ -300,9 +300,9 @@ export default function About() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-24 bg-gradient-to-b from-[#eff6ff] to-[#f5f3ff]">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="space-y-4 mb-16">
+      <section className="py-8 md:py-24 bg-gradient-to-b from-[#eff6ff] to-[#f5f3ff]">
+        <div className="container mx-auto px-4 sm:px-8 max-w-7xl">
+          <div className="space-y-3 md:space-y-4 mb-8 md:mb-16">
             <p className="text-xl text-[#1e293b]">See Our Portfolio Reels</p>
             <div className="flex justify-between items-center">
               <h2 className="text-5xl font-medium text-[#1e293b] flex items-center gap-2">
@@ -317,7 +317,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 title: "Sri Guru Parampara",
@@ -365,7 +365,7 @@ export default function About() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-b from-[#f5f3ff] to-[#eff6ff]">
+      <section className="py-8 md:py-24 bg-gradient-to-b from-[#f5f3ff] to-[#eff6ff]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="text-[#1e293b] mb-4">See from our client</p>
@@ -416,7 +416,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-[#eff6ff] to-[#f5f3ff]">
+      <section className="py-8 md:py-24 bg-gradient-to-b from-[#eff6ff] to-[#f5f3ff]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold text-[#1e293b] mb-8 flex items-center justify-center gap-2">
             CREATE NEW INNOVATION <span className="inline-flex items-center">TOGETHER <img src="/sphere.svg" alt="" className="w-8 h-8 ml-2" /></span>
